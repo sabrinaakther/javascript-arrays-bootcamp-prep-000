@@ -11,8 +11,8 @@ describe('arrays', () => {
   })
 
   describe('chocolateBars', () => {
-    it('is an array containing "snickers", "hundred grand", "kitkat", and "skittles"', () => {
-      expect(chocolateBars).to.eql['snickers', 'hundred grand', 'kitkat', 'skittles']
+    it('is an array containing "snickers", "hundred" "grand", "kitkat", and "skittles"', () => {
+      expect(chocolateBars).to.eql(['snickers', 'hundred', 'grand', 'kitkat', 'skittles'])
     })
   })
 
@@ -29,11 +29,12 @@ describe('arrays', () => {
       expect(array).to.eql([1])
     })
   })
-
-  describe('destructivelyAddElementToBeginningOfArray(array, element)', () => {
-    it('adds an element to the beginning of an array', () => {
-      expect(destructivelyAddElementToBeginningOfArray([1], 'foo')).to.eql(['foo', 1])
+describe('accessElementInArray(array, index)', () => {
+    it('accesses the element in array at the given index', () => {
+      expect(accessElementInArray([1, 2, 3], 2)).to.equal(3)
     })
+  })
+
 
     it('alters the original array', () => {
       const array = [1]
